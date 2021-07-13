@@ -45,7 +45,7 @@ func getTodoData() todoData {
 	json.Unmarshal(buffer, &payload)
 
 	// Payload is now "extractable".
-	// We can transform and store the data as a map.
+	// We can store the data as an array now.
 	data := payload.([]interface{})
 
 	tasks := make([]string, 0)
