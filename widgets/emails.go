@@ -155,7 +155,3 @@ func setup() *gmail.Service {
 }
 
 // End of the boilerplate needed to do a trivial task with Gmail
-
-func Run() {
-	fmt.Println(getEmailData())
-}
