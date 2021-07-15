@@ -81,8 +81,8 @@ func getEmailData() []emailData {
 func getClient(config *oauth2.Config) *http.Client {
 	// The file token.json stores the user's access and refresh tokens, and is
 	// created automatically when the authorization flow completes for the first
-	// time.
-	tokFile := "token.json"
+	// time. We save the file in the associated user's home directory.
+	tokFile := "/home/" + os.Getenv("HOME_USER") + "/hello/token.json"
 	tok, err := tokenFromFile(tokFile)
 	if err != nil {
 		tok = getTokenFromWeb(config)
@@ -135,7 +135,8 @@ func saveToken(path string, token *oauth2.Token) {
 func setup() *gmail.Service {
 
 	ctx := context.TODO()
-	b, err := ioutil.ReadFile("credentials.json")
+	// Get the credentials.json file of the associated user.
+	b, err := ioutil.ReadFile("/home/" + os.Getenv("HOME_USER") + "/hello/credentials.json")
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
 	}
