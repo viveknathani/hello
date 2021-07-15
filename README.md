@@ -1,4 +1,5 @@
 # hello
+[![Go Report Card](https://goreportcard.com/badge/github.com/viveknathani/hello)](https://goreportcard.com/report/github.com/viveknathani/hello)
 
 hello is a personalized terminal dashboard that I have built for myself.
 
@@ -32,7 +33,7 @@ This will create a binary and copy it to `/home/$USER/hello` directory.
 
 You should now configure your .bashrc file to add the `PATH` to this produced binary.
 
-If you have reached here, typing hello from any directory in your console should start the program. If it is the first time, the GMail client will ask you to authorize this app to use your account for reading emails. Do note that the app's details have to be set by yourself in the Google Cloud Platform. It is your self-created version, not run by the original author.
+If you have reached here, typing `hello` from any directory in your console should start the program. If it is the first time, the GMail client will ask you to authorize this app to use your account for reading emails. Do note that the app's details have to be set by yourself in the Google Cloud Platform. It is your self-created version, not run by the original author.
 
 ## contributing
 
