@@ -113,21 +113,23 @@ func SayHello() {
 	// Neatness
 	fmt.Println()
 
-	// Display the todo list
-	printColor(colorCyan)
-	fmt.Println("Here's your todo list.")
-	printColor(colorReset)
-	printAnything("-", maxWidth, true)
-	for _, todo := range todos.tasks {
-
-		fmt.Print("|")
-		printColor(colorRed)
-		n3, _ := fmt.Print(todo)
+	// Display the todo list if pending tasks exist
+	if len(todos.tasks) != 0 {
+		printColor(colorCyan)
+		fmt.Println("Here's your todo list.")
 		printColor(colorReset)
-		printAnything(" ", maxWidth-n3-2, false)
-		fmt.Println("|")
+		printAnything("-", maxWidth, true)
+		for _, todo := range todos.tasks {
+
+			fmt.Print("|")
+			printColor(colorRed)
+			n3, _ := fmt.Print(todo)
+			printColor(colorReset)
+			printAnything(" ", maxWidth-n3-2, false)
+			fmt.Println("|")
+		}
+		printAnything("-", maxWidth, true)
 	}
-	printAnything("-", maxWidth, true)
 
 	// Display unread emails if they exist
 	if len(emails) != 0 {
