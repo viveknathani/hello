@@ -23,8 +23,8 @@ func getConnectionData() float64 {
 	// Payload is now "extractable".
 	// We can transform and store the data as a map.
 	data := payload.(map[string]interface{})
-	data_download := data["download"].(map[string]interface{})
-	bandwidth := data_download["bandwidth"].(float64)
+	dataDownload := data["download"].(map[string]interface{})
+	bandwidth := dataDownload["bandwidth"].(float64)
 
 	var result float64 = (bandwidth / float64(1024*1024)) * 8.0
 	return result

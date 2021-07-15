@@ -50,12 +50,12 @@ func getWeatherData() weatherData {
 	// This map is further "extractable" if it contains any key that has nested JSON data
 	// We can extract the in the following manner because we know the structure of the
 	// incoming data.
-	data_current := data["current"].(map[string]interface{})
-	data_condition := data_current["condition"].(map[string]interface{})
-	temperature := data_current["temp_c"].(float64)
+	dataCurrent := data["current"].(map[string]interface{})
+	dataCondition := dataCurrent["condition"].(map[string]interface{})
+	temperature := dataCurrent["temp_c"].(float64)
 
 	return weatherData{
 		temperature: float32(temperature),
-		condition:   data_condition["text"].(string),
+		condition:   dataCondition["text"].(string),
 	}
 }
