@@ -31,7 +31,7 @@ func getEmailData() []emailData {
 	// "me" is a specification mandated by the API which indicates we are dealing
 	// for the currently authenticated user over here.
 	user := "me"
-	response, err := service.Users.Messages.List(user).LabelIds("UNREAD", "INBOX", "CATEGORY_PERSONAL").Do()
+	response, err := service.Users.Messages.List(user).LabelIds("UNREAD", "INBOX").Do()
 	if err != nil {
 		log.Fatalf("Unable to retrieve labels: %v", err)
 	}
