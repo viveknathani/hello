@@ -1,5 +1,5 @@
 # hello
-[![Go Report Card](https://goreportcard.com/badge/github.com/viveknathani/hello)](https://goreportcard.com/report/github.com/viveknathani/hello)
+[![Go Report Card](https://goreportcard.com/badge/github.com/viveknathani/hello)](https://goreportcard.com/report/github.com/viveknathani/hello) [![Maintainability](https://api.codeclimate.com/v1/badges/fe3b62de521aa8c980c5/maintainability)](https://codeclimate.com/github/viveknathani/hello/maintainability)
 
 hello is a personalized terminal dashboard that I have built for myself.
 
