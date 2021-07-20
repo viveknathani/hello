@@ -26,7 +26,7 @@ import (
 // to be in place which are credentials.json and token.json. The latter
 // is created after you log-in from your OAuth consent screen.
 func init() {
-	err := godotenv.Load(os.ExpandEnv("/home/$USER/hello/.env"))
+	err := godotenv.Load(os.ExpandEnv("/home/$USER/bin/hello/.env"))
 	if err != nil {
 		log.Fatal("Could not load .env file!")
 	}
